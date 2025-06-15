@@ -37,5 +37,9 @@ public class AddressBookMain {
         System.out.print("\nEnter the first name of the contact you want to edit: ");
         String nameToEdit = sc.nextLine();
         addressBook.editContact(nameToEdit, sc);
+
+        System.out.print("\nEnter the first name of the contact you want to delete: ");
+        String nameToDelete = sc.nextLine();
+        addressBook.deleteContact(nameToDelete);
     }
 }
