@@ -33,5 +33,9 @@ public class AddressBookMain {
 
         System.out.println("\nDisplaying all contacts:");
         addressBook.displayDetails();
+
+        System.out.print("\nEnter the first name of the contact you want to edit: ");
+        String nameToEdit = sc.nextLine();
+        addressBook.editContact(nameToEdit, sc);
     }
 }
