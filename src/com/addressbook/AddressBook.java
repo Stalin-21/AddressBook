@@ -51,6 +51,24 @@ public class AddressBook {
         }
     }
 
+    public void deleteContact(String name) {
+        boolean found = false;
+
+        for (int i = 0; i < contactList.size(); i++) {
+            if (contactList.get(i).getFirstName().equalsIgnoreCase(name)) {
+                contactList.remove(i);
+                System.out.println("Contact deleted successfully.");
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Contact not found.");
+        }
+    }
+
+
 
     public void displayDetails() {              // method to display the contact details.
        if(contactList.isEmpty()) {          // checking list is empty
